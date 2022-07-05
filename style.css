@@ -34,6 +34,13 @@ img {
   height: auto;
 }
 
+.flex-container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .grid-container {
   display: flex;
   height: 420px;
