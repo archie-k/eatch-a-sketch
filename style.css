@@ -33,3 +33,17 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+.grid-container {
+  display: flex;
+  height: 420px;
+  width: 420px;
+  flex-wrap: wrap;
+  gap: 1px;
+}
+
+.grid-container > div {
+  height: 25px;
+  width: 25px;
+  background-color: black;
+}
