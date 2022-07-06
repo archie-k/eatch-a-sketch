@@ -6,7 +6,7 @@ for (let i = 0; i < numberOfGrid; i++) {
   let div = document.createElement("div");
   divContainer.appendChild(div);
 
-  div.addEventListener("pointerenter", function () {
+  div.addEventListener("pointerenter", () => {
     div.style.background = "red";
   });
 }
