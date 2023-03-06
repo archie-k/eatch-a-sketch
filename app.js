@@ -5,12 +5,17 @@ const sizeButton = document.querySelector(".grid-size-select");
 let numberOfGrid;
 
 sizeButton.addEventListener("click", () => {
-
   numberOfGrid = Number(prompt("How big is your grid?"));
+  
+  while (numberOfGrid > 64) {
+    numberOfGrid = Number(prompt("Maximum grid size is 64x64"));
+  }
+
   resetGrid();
   renderGrid(numberOfGrid);
   hoverEvent();
 });
+
 
 const singleGridElement = () => {
   let div = document.createElement("div");
