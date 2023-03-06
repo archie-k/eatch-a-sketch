@@ -2,24 +2,26 @@
 const divContainer = document.querySelector(".grid-container");
 const sizeButton = document.querySelector(".grid-size-select");
 
+let numberOfGrid;
+
 sizeButton.addEventListener("click", () => {
-  let numberOfGrid = prompt("how big is tyour grid");
-  renderCanvas(numberOfGrid ** 2);
-  clearCanvas();
+  numberOfGrid = Number(prompt("How big is your grid?"));
+  renderGrid(numberOfGrid);
 });
 
-let renderCanvas = (size) => {
-  for (let i = 0; i < size; i++) {
-    div = document.createElement("div");
-    divContainer.appendChild(div);
+const singleGridElement = () => {
+  let div = document.createElement("div");
+  div.style.width = 420 / numberOfGrid + "px"; 
+  div.style.height = 420 / numberOfGrid + "px";
+  return div;
+}
 
-    div.addEventListener("pointerenter", () => {
-      div.style.background = "red";
-    });
+
+const renderGrid = (number) => {
+  for(let i = 0; i < number; i++) {
+    for(let j = 0; j < number; j++) {
+      divContainer.appendChild(singleGridElement());
+    }
   }
-};
+}
 
-let clearCanvas = () => {
-  divContainer.removeChild(div);
-  console.log("test");
-};
