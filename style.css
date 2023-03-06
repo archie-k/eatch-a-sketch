@@ -45,7 +45,6 @@ img {
   box-sizing: content-box;
   display: flex;
   flex-wrap: wrap;
-  gap: 1px;
   width: 420px;
   height: 420px;
   border: 1px solid black;
