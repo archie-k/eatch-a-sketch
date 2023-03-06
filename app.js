@@ -5,7 +5,9 @@ const sizeButton = document.querySelector(".grid-size-select");
 let numberOfGrid;
 
 sizeButton.addEventListener("click", () => {
+
   numberOfGrid = Number(prompt("How big is your grid?"));
+  resetGrid();
   renderGrid(numberOfGrid);
 });
 
@@ -25,3 +27,9 @@ const renderGrid = (number) => {
   }
 }
 
+const resetGrid = () => {
+  while(divContainer.firstChild) {
+    divContainer.removeChild(divContainer.firstChild);
+    console.log('Element usnięty!!')
+  }
+}
